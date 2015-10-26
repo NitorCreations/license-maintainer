@@ -1,1 +1,1 @@
-.githooks/README.md
+.githooks/license-maintainer/README.md
