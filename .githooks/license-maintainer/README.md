@@ -89,7 +89,7 @@ Now we configure which files should have automatic copyright/license maintenance
 
 Configuration is done using the "gitattributes" mechanism, which is similar to gitignore. See `gitattributes(5)` manual page for details.
 
-The license maintainer includes its own configuration for license maintenance in `.githooks/license-maintainer/.gitattributes`. That is the only maintenance done by default. To enable license maintaintenance for files in your project, you specify the license template file to use for a file, or a filename pattern. First create a `.gitattributes` file, for example in the root directory of your repository. Then, for each file or pattern, specify the license using the "licensefile" attribute, e.g. with lines like:
+The license maintainer includes its own configuration for license maintenance in `.githooks/license-maintainer/.gitattributes`. That is the only maintenance done by default. To enable license maintenance for files in your project, you specify the license template file to use for a file, or a filename pattern. First create a `.gitattributes` file, for example in the root directory of your repository. Then, for each file or pattern, specify the license using the "licensefile" attribute, e.g. with lines like:
 
     *.java    licensefile=.githooks/license-maintainer/LICENSE-javadoc
     *.sh      licensefile=.githooks/license-maintainer/LICENSE-hash
