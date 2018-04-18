@@ -99,7 +99,10 @@ This will enable maintenance of all `*.java` files in the project with the `LICE
 
 Patterns starting with / are effective only in the directory where the `.gitattributes` file resides, and patterns without are effective also in subdirectories recursively. Again, see the `gitattributes(5)` manual page for more information.
 
-If you want to inhibit license maintenance for some specific file/pattern that otherwise would have license maintenance (by an earlier pattern match for example), you can specify `!licensefile` for that file to remove the setting.
+If you want to inhibit license maintenance for some specific file/pattern that otherwise would have license maintenance (by an earlier pattern match for example), you can specify `!licensefile` for that file to remove the setting. Example:
+
+    *.java    licensefile=.githooks/license-maintainer/LICENSE-javadoc
+    /src/com/example/NoLicenseMaintenance.java   !licensefile
 
 If you want to verify that the correct license templates will be used for each file, you can do that with the following command:
 
@@ -116,3 +119,7 @@ You can skip the maintenance of licenses for a single commit if you want. Just a
 # License
 
 The license-maintainer is distributed under the Apache 2.0 license. You may embed it in your project as long as you comply with the license for the files belonging to license-maintainer.
+
+# Contributing
+
+Any contributions are welcome. Please create pull requests against the `hooks-only` branch. The `master` branch is only there to link the README and LICENSE files to the repository root so they are visible on the project front page.
