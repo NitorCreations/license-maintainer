@@ -26,10 +26,16 @@ fi
 
 cd "$(dirname "$0")/../.."
 
+linkcmd="ln -snv"
+
+if [[ $OSTYPE != "darwin"* ]] ; then
+    linkcmd="$linkcmd --backup=numbered"
+fi
+
 for i in pre-commit ; do
     oldlink="$(readlink .git/hooks/${i} ||:)"
     newlink="../../.githooks/license-maintainer/${i}"
     if [ "$newlink" != "$oldlink" ]; then
-	ln -snv --backup=numbered "${newlink}" .git/hooks/
+	$linkcmd "${newlink}" .git/hooks/
     fi
 done
