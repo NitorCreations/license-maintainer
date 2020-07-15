@@ -29,7 +29,7 @@ Honestly I have only tested this on Linux so far. Please file any issues you hav
 * `.githooks/`
 * `.githooks/license-maintainer/`
     * `README.md` - this file
-    * `LICENSE` - license by which the license-maintainer is distributed
+    * `LICENSE.license-maintainer` - license by which the license-maintainer is distributed
     * `install` - script for automatic install
     * `pre-commit` - entry point for "pre-commit" git hook, has the git-specific parts
     * `license.pm` - perl module for adding & updating license in a single file at a time
